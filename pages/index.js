@@ -1,12 +1,7 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
+const Home = () => (
+  <div className="flex items-center justify-center flex-col">
+    <h1>Hello</h1>
+  </div>
+);
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
-  return (
-    <div className=" flex items-center justify-center">
-      <h1 className="font-bold text-center my-auto">CryptoNite</h1>
-    </div>
-  );
-}
+export default Home;

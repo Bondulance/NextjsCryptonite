@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",

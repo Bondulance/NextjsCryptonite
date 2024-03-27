@@ -61,7 +61,7 @@ const ButtonGroup = ({ setActive, router }) => {
       <Button
         btnName="Create"
         btnType="primary"
-        classStyles="mx-2 rounded-xl"
+        classStyles="mx-2 rounded-xl hover:underline"
         handleClick={() => {
           setActive("");
           router.push("/create-nft");

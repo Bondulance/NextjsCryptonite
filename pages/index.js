@@ -2,7 +2,7 @@
 import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { Banner, CreatorCard } from "../components";
+import { Banner, CreatorCard, NFTCard } from "../components";
 
 import images from "../assets";
 import { makeId } from "@/utils/makeid";
@@ -50,7 +50,7 @@ const Home = () => {
       <div className="w-full minmd:w-4/5">
         <Banner
           parentStyles="justify-start mb-6 h-72 sm:h-60 p-12 xs:p-4 xs:h-44 rounded-3xl"
-          childStyles="md:text-4xl xs:text-xl sm:text-2xl text-left text-white dark:text-white"
+          childStyles="md:text-4xl xs:text-xl sm:text-2xl text-left text-white dark:text-white "
           name=" Discover, collect, and sell extroadinary NFT's"
         />
         <div>
@@ -104,6 +104,36 @@ const Home = () => {
                 </>
               )}
             </div>
+          </div>
+        </div>
+
+        <div className="mt-10">
+          <div
+            className="flexBetween mx-4 xs:mx-0
+              minlg:mx-8 sm:flex-col sm:items-start"
+          >
+            <h1
+              className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl
+        font-semibold xs:ml-0 sm:mb-4 flex-1"
+            >
+              Hot Bids
+            </h1>
+            <div>Searchbar</div>
+          </div>
+          <div className="mt-3 w-full flex flex-wrap justify-start md:justify-center">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+              <NFTCard
+                key={`nft-${i}`}
+                nft={{
+                  i,
+                  name: `Nifty NFT ${i}`,
+                  seller: `0x${makeId(3)}...${makeId(4)}`,
+                  owner: `0x${makeId(3)}...${makeId(4)}`,
+                  description: "NFT for Sale",
+                  price: (10 - i * 0.746).toFixed(2),
+                }}
+              />
+            ))}
           </div>
         </div>
       </div>

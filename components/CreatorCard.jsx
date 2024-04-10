@@ -40,7 +40,7 @@ const CreatorCard = ({ creatorImage, rank, creatorName, creatorEths }) => (
     <div className="mt-3 minlg:mt-7 text-center flexCenter flex-col">
       <p
         className="font-poppins dark:text-white text-nft-black-1 font-semibold
-      text-base normal-case"
+      text-base"
       >
         {creatorName}
       </p>
